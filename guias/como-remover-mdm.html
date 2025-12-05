@@ -31,14 +31,15 @@
 			<li>Cabo USB que vem na caixa do tablet ou outro que tenha USB Type-C em uma extremidade e USB Type-A em outra, assim como o cabo do carregador do tablet.</li>
 			<li>Ter um computador com Windows ou Linux (testado no Ubuntu e Linux Mint)</li>
 			<li>Seu computador deve estar com a última versão do
-			  <a href="https://developer.android.com/tools/releases/platform-tools">Android SDK Platform Tools</a>
-        instalado para usar os comandos do ADB e Fastboot. </li>
+				<a href="https://developer.android.com/tools/releases/platform-tools">Android SDK Platform Tools</a>
+				instalado para usar os comandos do ADB e Fastboot. </li>
 			<li>Faça o download do
-		    <a href="https://sourceforge.net/projects/multilaser-m8-4g-so0v-rom/files/">SP SP Flash Tool v5 e da stock ROM V8.20250304 da Multilaser</a>
+				<a href="https://sourceforge.net/projects/multilaser-m8-4g-so0v-rom/files/">SP SP Flash Tool v5 e da stock ROM V8.20250304 da Multilaser</a>
 			</li>
 			<li>Para usuários do Windows, instale os drivers
-			  <a href="https://multisync.multilaser.com.br/">da Multilaser</a>
-			  ou MediaTek. </li>
+				<a href="https://multisync.multilaser.com.br/">da Multilaser</a>
+				ou MediaTek.
+			</li>
 		</ul>
 		<h2> Para os usuários do Linux (Ubuntu) (incompleto)</h2>
 		<p>... </p>
@@ -51,10 +52,7 @@
 		<div class="image-text-container"> 
 			<p>2. Saiba o caminho da pasta deles, por exemplo:</p>
 		</div>
-		<p>
-			<code>C:/Users/voce/Downloads/SP_Flash_Tool_V5.2404_Windows_spflashtools.com</code>
-		</p>
-		
+		<pre><code>C:/Users/voce/Downloads/SP_Flash_Tool_V5.2404_Windows_spflashtools.com</code></pre>
 		<img src="../assets/00001.jpg" />
 		<div class="image-text-container">
 			<p>3. Em seu tablet, remova a sua conta do Google no seu tablet: abra as notificações, clique em "Gerenciar" ou "Histórico" ou no texto "Sem notificações".</p>
@@ -125,10 +123,8 @@
 		</div>
 		<img src="../assets/00016.jpg" />
 		<div class="image-text-container">
-			<p>
-				17. Lembre-se do caminho que levava aos arquivos extraídos da stock ROM. Talvez para você o <code>MT6765_Android_scatter.xml</code> do tablet esteja em...<br>
-				<code>C:/Users/voce/Downloads/Multilaser_M8_4G_SO0V_Stock-ROM_V8.20250304/MT6765_Android_scatter.xml</code>
-			</p>
+			<p>17. Lembre-se do caminho que levava aos arquivos extraídos da stock ROM. Talvez para você o <code>MT6765_Android_scatter.xml</code> do tablet esteja em...</p>
+			<pre><code>C:/Users/voce/Downloads/Multilaser_M8_4G_SO0V_Stock-ROM_V8.20250304/MT6765_Android_scatter.xml</code></pre>
 		<p>18. Abra <code>MT6765_Android_scatter.xml</code>.</p>
 		<p>19. Espere o a leitura do Checksum ser feita. Uma barra de carregamento rosa deve aparecer na parte de baixo da janela do programa.</p>
 		<img src="../assets/00017.jpg" />
@@ -219,13 +215,11 @@
 		<img src="../assets/00038.jpg" />
 		<div class="image-text-container">
 			<p>41. Abra o Prompt de Comando/Terminal/PowerShell e escreva <code>.\adb.exe devices</code>, isso deve mostrar algo como</p>
-			<code>
-				C:\Users\voce\Downloads\platform-tools> .\adb.exe devices<br>
-				* daemon not running; starting now at tcp: 5037<br>
-				* daemon started successfully<br>
-				List of devices attached<br>
-				XXXXXXXXXXX     unauthorized
-			</code>
+			<pre><code>C:\Users\voce\Downloads\platform-tools> .\adb.exe devices
+* daemon not running; starting now at tcp: 5037
+* daemon started successfully
+List of devices attached
+XXXXXXXXXXX     unauthorized</code></pre>
 			<p>42. Veja o seu tablet e dê a permissão de depuração USB. Caso desconecte o cabo e não deseje ter que dar permissões de novo, ative "Sempre permitir a partir deste computador".</p>
 		</div>
 		<img src="../assets/00039.png" />
@@ -239,33 +233,31 @@
 		<img src="../assets/00041.jpg" />
 		<div class="image-text-container">
 			<p>Tradução da mensagem para o português do Brasil</p>
-			<code>
-				Desbloquear o bootloader?<br>
-				<br>
-				Se você desbloquear o bootloader, você será capaz de instalar software de sistemas operacionais customizados neste telefone.<br>
-				<br>
-				Um sistema operacional customizado não está sujeito aos mesmos testes que o sistema operacional original e pode fazer o seu telefone e os aplicativos instalados pararem de funcionar corretamente.<br>
-				<br>
-				Para prevenir acesso não-autorizado aos seus dados pessoais, ao desbloquear o bootloader também serão apagados todos os dados pessoais do seu telefone (uma "restauração de dados de fábrica").<br>
-				<br>
-				Pressione os botões de Aumentar/Diminuir o volume para selecionar Sim ou Não.<br>
-				<br>
-				Sim (Aumentar volume): Desbloquear (pode anular a garantia).<br>
-				<br>
-				Não (Diminuir volume): Não desbloquear o bootloader.<br>
-			</code>
+				<pre>Desbloquear o bootloader?
+					
+Se você desbloquear o bootloader, você será capaz de instalar software de sistemas operacionais customizados neste telefone.
+					
+Um sistema operacional customizado não está sujeito aos mesmos testes que o sistema operacional original e pode fazer o seu telefone e os aplicativos instalados pararem de funcionar corretamente.
+					
+Para prevenir acesso não-autorizado aos seus dados pessoais, ao desbloquear o bootloader também serão apagados todos os dados pessoais do seu telefone (uma "restauração de dados de fábrica").
+					
+Pressione os botões de Aumentar/Diminuir o volume para selecionar Sim ou Não.
+					
+Sim (Aumentar volume): Desbloquear (pode anular a garantia).
+					
+Não (Diminuir volume): Não desbloquear o bootloader.</pre>
 				<p>45. Desbloqueie o bootloader pressionando o botão de Aumentar volume.</p>
 				<p>46. No Prompt de Comando/Terminal/PowerShell, aparecerá a mensagem parecida com essa</p>
-			<code>
-				C:\Users\voce\Downloads\platform-tools> .\fastboot.exe flashing unlock<br>
-				(bootloader) Start unlock flow<br>
-				<br>
-				OKAY [  5.541s]<br>
-				Finished. Total time: 5.747s
-			</code>
-			<p>47. Escreva o comando `.\fastboot reboot fastboot` para reiniciar o tablet no modo fastbootd e fazer a instalação da GSI por lá.</p>
+			<pre><code>C:\Users\voce\Downloads\platform-tools> .\fastboot.exe flashing unlock
+(bootloader) Start unlock flow
 
-			<p>48. Continuação do guia: <a href="./como-instalar-GSI.html">Como instalar a GSI no Multilaser M8 4G</a></p>
+OKAY [  5.541s]
+Finished. Total time: 5.747s</code></pre>
+			<p>47. Escreva o comando <code>.\fastboot reboot fastboot</code> para reiniciar o tablet no modo fastbootd e fazer a instalação da GSI por lá.</p>
+
+			<p>48. Continuação do guia:
+				<a href="./como-instalar-GSI.html">Como instalar a GSI no Multilaser M8 4G</a>
+			</p>
 		</div>
 	</body>
 </html>

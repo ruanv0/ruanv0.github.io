@@ -1,56 +1,67 @@
+html, body {
+	height: 100%;
+	margin: 0.5em;
+	padding: 0;
+}
 @font-face {
- font-family: 'AdwaitaSans';
- src: url('adwaita-sans.ttf') format('opentype');
- font-weight: 100 900; /* variable weight range */
- font-stretch: 75% 125%; /* variable width range */
- font-style: normal;
+	font-family: 'AdwaitaSans';
+	src: url('adwaita-sans.ttf') format('opentype');
+	font-weight: 100 900; /* variable weight range */
+	font-stretch: 75% 125%; /* variable width range */
+	font-style: normal;
 }
 body {
- font-family: 'AdwaitaSans', sans-serif;
- font-weight: 450; /* mid-range weight */
- font-size: 120%
+	font-family: 'AdwaitaSans', sans-serif;
+	font-weight: 450; /* mid-range weight */
 }
 @font-face {
- font-family: 'AdwaitaMono';
- src: url('adwaita-mono.ttf') format('opentype');
- font-weight: 100 900; /* variable weight range */
- font-stretch: 75% 125%; /* variable width range */
- font-style: monospace;
+	font-family: 'AdwaitaMono';
+	src: url('adwaita-mono.ttf') format('opentype');
+	font-weight: 100 900; /* variable weight range */
+	font-stretch: 75% 125%; /* variable width range */
+	font-style: monospace;
+}
+p, h1, h2, h3, h4 {
+	overflow-wrap: break-word;
+}
+pre {
+	background: #f4f4f4;
+	padding: 10px;
+	border-radius: 5px;
+	overflow-x: auto;
+	white-space: pre;
+	font-family: 'AdwaitaMono', monospace;
+	font-weight: 450; /* mid-range weight */
+	overflow-wrap: normal;
 }
 code {
- font-family: 'AdwaitaMono', monospace;
- font-weight: 450; /* mid-range weight */
- font-size: 120%
-}
-html, body {
- height: 100%;
- margin: 0;
- padding: 0;
+	font-family: 'AdwaitaMono', monospace;
+	font-weight: 450; /* mid-range weight */
+	display: block;
+	overflow-x: auto;
+	overflow-wrap: normal;
 }
 img {
- display: block;
- max-width: 90%;
- max-height: 90vh;
- margin: auto;
- float: left;
- margin-bottom: 1em;
- margin-left: 1em;
+	display: block;
+	max-width: 90%;
+	max-height: 90vh;
+	margin: auto;
+	object-fit: scale-down;
 }
-
 .image-text-container {
- clear: left
+	clear: left;
 }
-
 table {
-  border-collapse: collapse;
-  letter-spacing: 1px;
+	border-collapse: collapse;
+	letter-spacing: 1px;
+	display: block;
+	min-width: 100%;
+	overflow-x: auto;
 }
-
 th, td {
-  border: 1px solid rgb(0 0 0);
-  padding: 8px 10px;
+	border: 1px solid rgb(0 0 0);
+	padding: 8px 10px;
 }
-
 td:last-of-type {
-  text-align: center;
+	text-align: center;
 }
