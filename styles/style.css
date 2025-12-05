@@ -1,0 +1,56 @@
+@font-face {
+ font-family: 'AdwaitaSans';
+ src: url('adwaita-sans.ttf') format('opentype');
+ font-weight: 100 900; /* variable weight range */
+ font-stretch: 75% 125%; /* variable width range */
+ font-style: normal;
+}
+body {
+ font-family: 'AdwaitaSans', sans-serif;
+ font-weight: 450; /* mid-range weight */
+ font-size: 120%
+}
+@font-face {
+ font-family: 'AdwaitaMono';
+ src: url('adwaita-mono.ttf') format('opentype');
+ font-weight: 100 900; /* variable weight range */
+ font-stretch: 75% 125%; /* variable width range */
+ font-style: monospace;
+}
+code {
+ font-family: 'AdwaitaMono', monospace;
+ font-weight: 450; /* mid-range weight */
+ font-size: 120%
+}
+html, body {
+ height: 100%;
+ margin: 0;
+ padding: 0;
+}
+img {
+ display: block;
+ max-width: 90%;
+ max-height: 90vh;
+ margin: auto;
+ float: left;
+ margin-bottom: 1em;
+ margin-left: 1em;
+}
+
+.image-text-container {
+ clear: left
+}
+
+table {
+  border-collapse: collapse;
+  letter-spacing: 1px;
+}
+
+th, td {
+  border: 1px solid rgb(0 0 0);
+  padding: 8px 10px;
+}
+
+td:last-of-type {
+  text-align: center;
+}

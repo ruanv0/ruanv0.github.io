@@ -1,0 +1,263 @@
+<!doctype html>
+<html lang="pt-BR">
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width" />
+		<title>Como fazer o flashing da GSI no Multilaser M8 4G</title>
+		<link href="../styles/style.css" rel="stylesheet" />
+	</head>
+	<body>
+		<h1>📱 Como fazer o flashing da GSI no Multilaser M8 4G - ML_SO0V_M8_4G</h1>
+		<h2>Informações do Treble</h2>
+		<table>
+			<thead>
+				<tr>
+					<th scope="col">Detalhe</th>
+					<th scope="col">Valor</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<td scope="row">Versão do VNDK</th>
+					<td>31.0</td>
+				</tr>
+				<tr>
+					<td scope="row">Linker namespace isolation</th>
+					<td>O VNDK não está no modo lite</td>
+				</tr>
+				<tr>
+					<td scope="row">Arquitetura da CPU</th>
+					<td>ARM64</td>
+				</tr>
+				<tr>
+					<td scope="row">System-as-root</th>
+					<td>Sim</td>
+				</tr>
+				<tr>
+					<td scope="row">Partições dinâmicas</th>
+					<td>Sim</td>
+				</tr>
+			</tbody>
+		</table>
+		<h2>Informações do dispositivo</h2>
+		<table>
+			<thead>
+				<tr>
+					<th scope="col">Componente</th>
+					<th scope="col">Valor</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<td scope="row">SoC</th>
+					<td>MediaTek Helio P22</td>
+				</tr>
+				<tr>
+					<td scope="row">Memória RAM</th>
+					<td>2 GB</td>
+				</tr>
+				<tr>
+					<td scope="row">Armazenamento interno</th>
+					<td>32 GB</td>
+				</tr>
+				<tr>
+					<td scope="row">Resolução da tela</th>
+					<td>1280 x 800</td>
+				</tr>
+				<tr>
+					<td scope="row">Tamanho da tela</th>
+					<td>108 mm x 172 mm</td>
+				</tr>
+			</tbody>
+		</table>
+		<h2>⚙️ Suporte da GSI ao hardware</h2>
+		<table>
+			<thead>
+				<tr>
+					<th scope="col">Componente</th>
+					<th scope="col">Status</th>
+					<th scope="col">Comentário</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<td scope="row">Capacidade de bateria correta</th>
+					<td>❌</td>
+					<td>O sistema diz que é 2946 mAh enquanto a capacidade original é 4000 mAh</td>
+				</tr>
+				<tr>
+					<td scope="row">Chat RCS</th>
+					<td>❌</td>
+					<td>O Google Mensagens diz: "Não suportado, o seu dispositivo não atende aos requisitos de segurança"</td>
+				</tr>
+				<tr>
+					<td scope="row">Rádio FM</th>
+					<td>❔</td>
+					<td>Não há aplicativo pré-instalado na GSI</td>
+				</tr>
+				<tr>
+					<td scope="row">Cartão MicroSD</th>
+					<td>❔</td>
+					<td>Não foi testado</td>
+				</tr>
+				<tr>
+					<td scope="row">Fone de ouvido com fio</th>
+					<td>✅</td>
+					<td>⚠️Os fones de ouvido com fio tocam ao mesmo tempo que os autofalantes do tablet</td>
+				</tr>
+				<tr>
+					<td scope="row">Autofalante regular</th>
+					<td>✅</td>
+					<td></td>
+				</tr>
+				<tr>
+					<td scope="row">Autofalante de telefone</th>
+					<td>✅</td>
+					<td>Para corrigir os problemas de áudio, ative 'Disable "Voice Call in" route' no Treble Settings > Misc features > Telephony</td>
+				</tr>
+				<tr>
+					<td scope="row">VoLTE</th>
+					<td>✅</td>
+					<td>Para fazer o VoLTE funcionar, vá em Treble Settings > IMS features, e então instale o IMS APK for MediaTek, ative "Request IMS network", ative "Force the presence of 4G Calling setting" e reinicie o seu dispositivo.</td>
+				</tr>
+				<tr>
+					<td scope="row">Sensores de acelerômetro e proximidade</th>
+					<td>✅</td>
+					<td>Para mim, eles funcionam de forma parecida que o sistema original da Multilaser</td>
+				</tr>
+				<tr>
+					<td scope="row">GNSS</th>
+					<td>✅</td>
+					<td></td>
+				</tr>
+				<tr>
+					<td scope="row">SMS e MMS</th>
+					<td>✅</td>
+					<td></td>
+				</tr>
+				<tr>
+					<td scope="row">Câmera traseira e frontal</th>
+					<td>✅</td>
+					<td></td>
+				</tr>
+				<tr>
+					<td scope="row">Microfone</th>
+					<td>✅</td>
+					<td></td>
+				</tr>
+				<tr>
+					<td scope="row">Cartão SIM</th>
+					<td>✅</td>
+					<td></td>
+				</tr>
+				<tr>
+					<td scope="row">Dados móveis</th>
+					<td>✅</td>
+					<td></td>
+				</tr>
+				<tr>
+					<td scope="row">Bluetooth</th>
+					<td>✅</td>
+					<td></td>
+				</tr>
+				<tr>
+					<td scope="row">Wi-Fi 2.4GHz, 5GHz e WPA3/SAE</th>
+					<td>✅</td>
+					<td></td>
+				</tr>
+			</tbody>
+		</table>
+
+		<h2>ℹ️ Notas adicionais</h2>
+		<ul>
+			<li>Por causa do bootloader desbloqueado e da custom ROM instalada, o Play Integrity diz que que o tablet não atende a integridade do dispositivo e nem a integridade forte, apenas a integridade básica. Portanto, os aplicativos de bancos e alguns outros se recusarão a funcionar totalmente ou parcialmente.</li> 
+			<li>Espere muitos travamentos, lentidões e mensagens de "O aplicativo não está respondendo" devido ao baixo poder de processamento do SoC e pouca memória RAM.</li>
+			<li>Para fazer o VoLTE funcionar, vá em Treble Settings > IMS features, e então instale o IMS APK for MediaTek, ative "Request IMS network", ative "Force the presence of 4G Calling setting" e reinicie o seu dispositivo.</li>
+			<li>Para corrigir os problemas de áudio, ative 'Disable "Voice Call in" route' no Treble Settings > Misc features > Telephony</li>
+			<li>Os fones de ouvido com fio tocam ao mesmo tempo que os autofalantes do tablet.</li>
+		</ul>
+		<h2>⚙️ GSIs funcionando</h2>
+		<p>Aviso: O desenvolvimento delas podem ter sido descontinuadas.</p>
+		<table>
+			<thead>
+				<tr>
+					<th scope="col">Mantenedor</th>
+					<th scope="col">Versão do sistema</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<td scope="row">Andy Yan</th>
+					<td><a href="https://sourceforge.net/projects/andyyan-gsi/files/lineage-20-td/">Android 13, LineageOS 20.0 TD (TrebleDroid) with GApps<a/></td>
+				</tr>
+				<tr>
+					<td scope="row">Andy Yan</th>
+					<td><a href="https://sourceforge.net/projects/andyyan-gsi/files/lineage-21-pre-qpr2-td/">Android 14 pre-QPR2, LineageOS 21.0 pre-QPR2 TD (TrebleDroid) with GApps<a/></td>
+				</tr>
+				<tr>
+					<td scope="row">Andy Yan</th>
+					<td><a href="https://sourceforge.net/projects/andyyan-gsi/files/lineage-21-td/">Android 14, LineageOS 21.0 TD (TrebleDroid) with GApps<a/></td>
+				</tr>
+				<tr>
+					<td scope="row">TrebleDroid Builders</th>
+					<td><a href="https://github.com/TrebleDroid/treble_experimentations">Android 15 (vanilla, no GApps)<a/></td>
+				</tr>
+				<tr>
+					<td scope="row">Doze-off</th>
+					<td><a href="https://github.com/Doze-off/lineage_treble">Android 16, LineageOS 23.0 with GApps<a/></td>
+				</tr>
+			</tbody>
+		</table>
+
+		<p>Veja também a lista de GSIs Android disponíveis, se quiser: https://github.com/TrebleDroid/treble_experimentations/wiki/Generic-System-Image-%28GSI%29-list</p>
+
+		<h2>📃 Passos para instalar</h2>
+
+		<p>1. Requisitos para a instalação</p>
+		<ul>
+			<li>Seu tablet deve estar com o bootloader desbloqueado</li>
+			<li>Seu computador deve estar com a última versão do
+				<a href="https://developer.android.com/tools/releases/platform-tools">Android SDK Platform Tools<a/>
+				instalado.</li>
+			<li>Para usuários do Windows, instale os drivers
+				<a href="https://multisync.multilaser.com.br/">da Multilaser<a/>
+				ou da MediaTek.</li>
+		</ul>
+		
+		<p>3. Coloque o seu tablet no modo fastbootd usando o Terminal/Prompt de Comamdo/PowerShell/cmd no seu computador.</p>
+		<p>2.1. Se o tablet estiver ligado no Android (com depuração USB ativada): <code>adb reboot fastboot</code></p>
+		<p>2.2. Se o tablet estiver no modo fastboot (bootloader): <code>fastboot reboot fastboot</code></p>
+
+		<img alt="Multilaser M8 4G SO0V fastbootd" src="../assets/00042.jpg" />
+		<div class="image-text-container"> 
+			<p>3. Se não houver espaço suficiente na participação super para fazer o flash da GSI, delete a partição lógica <code>product_a</code> ou <code>product_b</code>, a que estiver no slot ativo (A ou B).</p>
+			<p>3.1. Se o slot A estiver ativo: <code>fastboot delete-logical-partition product_a</code></p>
+			<p>3.2. Se o slot B estiver ativo: <code>fastboot delete-logical-partition product_b</code></p>
+			<p>4. Fazer o flash da GSI: <code>fastboot flash system system-arm64_ab-gapps.img</code></p>
+			<p>5. Coloque o seu tablet no modo recovery: <code>fastboot reboot recovery</code></p>
+		</div>
+		<img alt="Multilaser M8 4G SO0V recovery mode" src="../assets/00043.jpg" />
+		<div class="image-text-container"> 
+			<p>6. Usando os dois botões de volume e o botão Power (liga/desliga) do seu tablet, selecione as "Opcoes avancadas" and clique no botão Power (liga/desliga).</p>
+		</div>
+		<img alt="Multilaser M8 4G SO0V advanced options on recovery mode" src="../assets/00044.jpg" />
+		<div class="image-text-container">
+			<p>7. Selecione "Restaurar padrao de fabrica" para apagar os dados das partições data metadata e clique no botão Power. Mensagens de "Wiping data... " aparecerá.</p>
+		</div>
+		<img alt="Multilaser M8 4G SO0V wiping data on recovery mode" src="../assets/00045.jpg" />
+		<div class="image-text-container">
+			<p>8. Reinicie ao sistema do tablet selecionando "Opcoes avancadas" e depois "Reinicie o sistema agora".</p>
+		</div>
+		<img alt="Flashing GSI using fastboot on Windows 10" src="../assets/00046.jpg" />
+		<img alt="Flashing GSI using fastboot on Linux Mint XFCE" src="../assets/00047.png" />
+		<div class="image-text-container"> 
+			<h2>📷 Capturas de tela</h2>
+			<h4>LineageOS 23.0 (Doze-off) lockscreen</h4>
+		</div>
+		<img alt="LineageOS 23.0 GSI (Doze-off) running on a Multilaser tablet" src="../assets/00048.jpg" />
+		<div class="image-text-container"> 
+			<h4>Informações do dispositivo nas Configurações</h4>
+		</div>
+		<img alt="LineageOS 23.0 Setting on a Multilaser tablet"  src="../assets/00049.png" />
+	</body>
+</html>
