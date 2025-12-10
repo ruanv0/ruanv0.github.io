@@ -1,3 +1,42 @@
+:root {
+	/* this has to be set to switch between light or dark */
+	color-scheme: light dark;
+
+	--light-bg: #FBFBE0;
+	--light-color: #221A14;
+	--light-link-href: #0000FF;
+	--light-visited-href: #800080;
+	--light-hover-href: #FFC0CB;
+	--light-active-href: #FF0000;
+	--light-focus-href-outline: 2px solid #00FF00;
+
+	--dark-bg: #261F19;
+	--dark-color: #E1D4CB;
+	--dark-link-href: #88CCFF;
+	--dark-visited-href: #BB88DD;
+	--dark-hover-href: #FFFFFF;
+	--dark-active-href: #FF6666;
+	--dark-focus-href-outline: 2px solid #00FF00;
+}
+* {
+  background-color: light-dark(var(--light-bg), var(--dark-bg));
+  color: light-dark(var(--light-color), var(--dark-color));
+}
+a:link {
+	color: light-dark(var(--light-link-href), var(--dark-link-href));
+}
+a:visited {
+	color: light-dark(var(--light-visited-href), var(--dark-visited-href));
+}
+a:hover {
+	color: light-dark(var(--light-hover-href), var(--dark-hover-href));
+}
+a:active {
+	color: light-dark(var(--light-active-href), var(--dark-active-href));
+}
+a:focus {
+	outline: light-dark(var(--light-focus-href-outline), var(--dark-focus-href-outline));
+}
 html, body {
 	height: 100%;
 	margin: 0.5em;
@@ -25,7 +64,8 @@ p, h1, h2, h3, h4 {
 	overflow-wrap: break-word;
 }
 pre {
-	background: #f4f4f4;
+	background: #312821;
+	color: var(--dark-color);
 	padding: 10px;
 	border-radius: 5px;
 	overflow-x: auto;
@@ -35,6 +75,8 @@ pre {
 	overflow-wrap: normal;
 }
 code {
+	background: #312821;
+	color: var(--dark-color);
 	font-family: 'AdwaitaMono', monospace;
 	font-weight: 450; /* mid-range weight */
 	display: block;
@@ -59,7 +101,7 @@ table {
 	overflow-x: auto;
 }
 th, td {
-	border: 1px solid rgb(0 0 0);
+	border: 1px solid light-dark(var(--light-color), var(--dark-color));
 	padding: 8px 10px;
 }
 td:last-of-type {
