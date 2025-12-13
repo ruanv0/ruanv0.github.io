@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="pt-BR">
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width" />
+		<title>Como instalar o Magisk no Multilaser M8 4G</title>
+		<link href="../styles/style.css" rel="stylesheet" />
+	</head>
+	<body>
+		<h1>Como instalar o Magisk no Multilaser M8 4G</h1>
+		<h2>⚠ Avisos</h2>
+		<ul>
+			<li>Se você já tem o Magisk instalado, é fortemente reconmendável que se use o método de "Instalação direta" no aplicativo do Magisk. Este tutorial é apenas para a instalação inicial.</li>
+		</ul>
+		<h2>📃 Passos para instalar</h2>
+
+		<p>1. Requisitos para a instalação</p>
+		<ul>
+			<li>Seu tablet deve estar com o bootloader desbloqueado</li>
+			<li>Ter um computador com Windows, Linux ou macOS/OS X (adapte o tutorial para o seu ambiente).</li>
+			<li>Ter um cabo USB. A porta do tablet é USB Type-C.</li>
+			<li>Seu computador deve estar com a última versão do
+				<a href="https://developer.android.com/tools/releases/platform-tools">Android SDK Platform Tools</a>
+				instalado.</li>
+			<li>Para usuários do Windows, instale os drivers
+				<a href="https://multisync.multilaser.com.br/">da Multilaser</a>
+				ou da MediaTek.</li>
+		</ul>
+		
+		<p>2. Tenha ou faça o download do arquivo de imagem do boot "boot.img". Eu tenho ele no meu repositório no SourceForge:
+			<a href="https://sourceforge.net/projects/multilaser-m8-4g-so0v-rom/files/">https://sourceforge.net/projects/multilaser-m8-4g-so0v-rom/files/</a>
+		</p>
+		<img src="../assets/00059.webp" />
+		<img src="../assets/00060.webp" />
+		<img src="../assets/00061.webp" />
+		<div class="image-text-container"> 
+			<p>3. Copie o arquivo para o tablet.</p>
+			<p>4. No tablet, instale o aplicativo do Magisk da fonte oficial no GitHub:
+				<a href="https://github.com/topjohnwu/Magisk">https://github.com/topjohnwu/Magisk</a>
+			</p>
+		</div>
+		<img src="../assets/00057.webp" />
+		<div class="image-text-container"> 
+			<p>5. Ao abrir o aplicativo Magisk, a tela inicial pode ser essa. Clique em "Instalar".</p>
+		</div>
+		<img src="../assets/00058.webp" />
+		<div class="image-text-container"> 
+			<p>6. Clique em "Selecione e corrija um arquivo".</p>
+		</div>
+		<img src="../assets/00062.webp" />
+		<div class="image-text-container"> 
+			<p>7. Localize no seu tablet e selecione o arquivo de imagem "boot.img", que havia sido copiado do computador.</p>
+		</div>
+		<img src="../assets/00063.webp" />
+		<div class="image-text-container"> 
+			<p>8. O aplicativo do Magisk irá fazer o arquivo de imagem de boot modificado.</p>
+		</div>
+		<img src="../assets/00064.webp" />
+		<div class="image-text-container"> 
+			<p>9. Copie este arquivo de imagem modificado para o computador.</p>
+		</div>
+		<img src="../assets/00065.webp" />
+		<div class="image-text-container"> 
+			<p>10. Com a depuração USB ativada no tablet, digite o seguinte comando usando o ADB no Terminal/PowerShell/Prompt de Comando/cmd para reiniciar o tablet no modo Fastboot:</p>
+		</div>
+		<code>adb reboot bootloader</code>
+		<img src="../assets/00066.webp" />
+		<div class="image-text-container"> 
+			<p>11. Para instalar o Magisk na partição boot, digite o comando <code>fastboot flash boot /caminho/para/magisk_patched_[caracteres_aleatorios].img</code></p>
+			<p>12. Ao terminar, a palavra "Finished" deve ter aparecido no Terminal, como abaixo, no meu PowerShell.</code></p>
+			<pre><code>PS C:\Users\voce\Download\platform-tools> .\fastboot flash boot C:\Users\voce\Download\magisk_patched-30600_DeYDy.img
+Sending 'boot_a' (32768 KB)                 OKAY [  0.828s]
+Writing 'boot_a'                            OKAY [  0.479s]				
+Finished. Total time: 1.331s</code></pre>
+			<p>13. Reinicie o tablet no sistema com o comando <code>fastboot reboot</code></p>
+			<p>14. Ao abrir o aplicativo do Magisk, ele deve estar instalado.</p>
+		</div>
+		<img src="../assets/00067.webp" />
+	</body>
+</html>
