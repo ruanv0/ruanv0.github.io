@@ -80,7 +80,7 @@ body {
 	font-style: monospace;
 }
 pre {
-	background: #312821;
+	background: #403730;
 	color: var(--dark-color);
 	padding: 10px;
 	border-radius: 5px;
@@ -91,11 +91,10 @@ pre {
 	overflow-wrap: normal;
 }
 code {
-	background: #312821;
+	background: #403730;
 	color: var(--dark-color);
 	font-family: 'AdwaitaMono', monospace;
 	font-weight: 450; /* mid-range weight */
-	display: block;
 	overflow-x: auto;
 	overflow-wrap: normal;
 }
