@@ -1,20 +1,19 @@
 /*
-    WebSite do Ruan (https://ruanv0.github.io/) e
-	(https://github.com/ruanv0/ruanv0.github.io)
-    Copyright (C) 2025  Ruan Victor dSC <ruan_victor@protonmail.com>
+Ruan's blog
+Copyright (C) 2026  Ruan Victor dos Santos Correa (ruanvictordsc@gmail.com)
 
-    This program is free software: you can redistribute it and/or modify
-    it under the terms of the GNU General Public License as published by
-    the Free Software Foundation, either version 3 of the License, or
-    (at your option) any later version.
+This program is free software: you can redistribute it and/or modify
+it under the terms of the GNU General Public License as published by
+the Free Software Foundation, either version 3 of the License, or
+(at your option) any later version.
 
-    This program is distributed in the hope that it will be useful,
-    but WITHOUT ANY WARRANTY; without even the implied warranty of
-    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
-    GNU General Public License for more details.
+This program is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+GNU General Public License for more details.
 
-    You should have received a copy of the GNU General Public License
-    along with this program.  If not, see <https://www.gnu.org/licenses/>.
+You should have received a copy of the GNU General Public License
+along with this program.  If not, see <https://www.gnu.org/licenses/>.
 */
 :root {
 	/* this has to be set to switch between light or dark */
@@ -35,10 +34,16 @@
 	--dark-hover-href: #FFFFFF;
 	--dark-active-href: #FF6666;
 	--dark-focus-href-outline: 2px solid #00FF00;
+
+	--md-sys-color-primary: light-dark(#8A5021, #FFB782);
+	--md-sys-color-on-primary: light-dark(#FFFFFF, #4F2500);
+	--md-sys-color-secondary-container: light-dark(#FFDCC5, #5B412F);
+	--md-sys-color-on-secondary-container: light-dark(#5B412F, #FFDCC5);
+	--md-sys-color-outline: light-dark(#84746A, #9F8D83);
 }
 * {
-  background-color: light-dark(var(--light-bg), var(--dark-bg));
-  color: light-dark(var(--light-color), var(--dark-color));
+	background-color: light-dark(var(--light-bg), var(--dark-bg));
+	color: light-dark(var(--light-color), var(--dark-color));
 }
 a:link {
 	color: light-dark(var(--light-link-href), var(--dark-link-href));
@@ -60,24 +65,26 @@ html, body {
 }
 @font-face {
 	font-family: 'AdwaitaSans';
-	src: url('adwaita-sans.ttf') format('opentype');
+	src: url('./adwaita-sans.ttf') format('opentype');
 	font-weight: 100 900; /* variable weight range */
 	font-stretch: 75% 125%; /* variable width range */
 	font-style: normal;
 }
 body {
-	margin: 1em;
-	font-family: 'AdwaitaSans', sans-serif;
+	max-width: 45rem;   /* Limits line length for comfortable reading on wide screens */
+	margin: 2em auto;   /* Centers the layout and adds top/bottom spacing; 'auto' handles left/right margins */
+	padding: 0 1.5em;   /* Guarantees side breathing room on smaller screens where max-width isn't reached */
+	font-family: 'Cantarell', sans-serif;
 	font-weight: 450; /* mid-range weight */
 	overflow: auto;
 	overflow-wrap: break-word;
 }
 @font-face {
 	font-family: 'AdwaitaMono';
-	src: url('adwaita-mono.ttf') format('opentype');
+	src: url('./adwaita-mono.ttf') format('opentype');
 	font-weight: 100 900; /* variable weight range */
 	font-stretch: 75% 125%; /* variable width range */
-	font-style: monospace;
+	font-style: normal;
 }
 pre {
 	background: #403730;
@@ -102,10 +109,7 @@ img {
 	display: block;
 	max-width: 90%;
 	max-height: 90vh;
-	margin-left: auto;
-	margin-right: auto;
-	margin-top: 1em;
-	margin-bottom: 1em;
+	margin: 1em auto; /* This forces big centered margins! */
 	object-fit: contain;
 }
 .image-text-container {
@@ -118,7 +122,7 @@ table {
 	min-width: 100%;
 	overflow-x: auto;
 }
-th, td {
+td {
 	text-align: center;
 	border: 1px solid light-dark(var(--light-color), var(--dark-color));
 	padding: 0.2em;
